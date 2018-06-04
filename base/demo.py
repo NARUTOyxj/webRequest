@@ -19,11 +19,11 @@ class RunMain:
             res = self.send_post(url,data)
         return res
 
-# if __name__ == '__main__':
-#     url = 'http://scmpcapp.loongjoy.com/#/user/login#zh'
-#     data = {
-#         'nickname':'plat_yxj',
-#         'password':'123456'
-#     }
-#     run = RunMain(url,'POST',data)
-#     pint(run.res)
+if __name__ == '__main__':
+    url = 'http://scmpcapp.loongjoy.com/#/user/login#zh'
+    data = {
+        'nickname':'plat_yxj',
+        'password':'123456'
+    }
+    run = RunMain(url,'POST',data)
+    pint(run.res)

@@ -1,9 +1,13 @@
 import xlrd
 
 class OperationExcel:
-    def __init__(self,file_name,sheet_id):
-        self.file_name = file_name
-        self.sheet_id = sheet_id
+    def __init__(self,file_name = None,sheet_id = None):
+        if file_name:
+            self.file_name = file_name
+            self.sheet_id = sheet_id
+        else:
+            self.file_name = './dataconfig/interface.xlsx'
+            self.sheet_id = 0
         self.data = self.get_data()
 
     #获取sheets内容
@@ -22,8 +26,8 @@ class OperationExcel:
         return self.get_data().cell_value(row,col)
 
 if __name__ == '__main__':
-    opers = OperationExcel('./dataconfig/interface.xlsx',0)
+    opers = OperationExcel()
     print(opers.get_data().nrows)
     print(opers.get_lines())
-    print(opers.get_cell_value(2,2))
+    print(opers.get_cell_value(1,1))
    
