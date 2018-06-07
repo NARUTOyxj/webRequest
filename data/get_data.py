@@ -66,6 +66,11 @@ class GetData():
             return None
         return expect
 
+    #写入实际结果
+    def write_result(self,row,value):
+        col = int(data_config.get_result())
+        self.opera_excel.write_result(row,col,value)
+
         
 
 

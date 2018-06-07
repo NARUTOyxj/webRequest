@@ -1,4 +1,5 @@
 import requests
+import json
 
 class RunMethod:
     def post_main(self,url,data,header=None):
@@ -23,4 +24,4 @@ class RunMethod:
             res = self.post_main(url,data,header)
         else:
             res = self.get_main(url,data,header)
-        return res
+        return json.dumps(res,ensure_ascii=False,sort_keys=True,indent=2)

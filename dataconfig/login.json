@@ -1,1 +1,4 @@
-{"login_normal":{"fromsys":"pcapp","lang":"zh","nickname":"plat06","password":"123456"}}
+{"login_normal":{"fromSys":"scmpcapp","lang":"zh","nickname":"plat06","password":"123456"},
+"login_nonickname":{"fromSys":"scmpcapp","lang":"zh","nickname":"","password":"123456"},
+"login_nopassword":{"fromSys":"scmpcapp","lang":"zh","nickname":"plat06","password":""},
+"login_mismatch":{"fromSys":"scmpcapp","lang":"zh","nickname":"plat06","password":"1234567"}}
