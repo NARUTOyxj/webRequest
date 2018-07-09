@@ -25,7 +25,7 @@ class RunTest:
                 header = self.data.is_header(i)
                 depend_case = self.data.is_depend(i)
                 if depend_case != None:
-                    self.depend_data = DependentData(i)
+                    self.depend_data = DependentData(depend_case)
                     #获取依赖的响应数据
                     depend_reponse_data = self.depend_data.get_data_for_key(i)
                     #获取依赖的key
@@ -35,7 +35,6 @@ class RunTest:
 
                 if self.com_util.is_contain(expect,res):
                     self.data.write_result(i,'pass')
-                    print(res)
                 else:
                     self.data.write_result(i,'fail')
 

@@ -4,6 +4,7 @@ from util.operation_excel import OperationExcel
 from base.runmethod import RunMethod
 from data.get_data import GetData
 from jsonpath_rw import jsonpath,parse
+import json
 
 class DependentData:
     def __init__(self,case_id):
@@ -25,7 +26,7 @@ class DependentData:
         method = self.data.get_request_method(row_num)
         url = self.data.get_url(row_num)
         res = run_method.run_main(method,url,request_data,header)
-        return res
+        return json.loads(res)
 
     #根据依赖的key去获取执行依赖测试case的相应，然后返回
     def get_data_for_key(self,row):

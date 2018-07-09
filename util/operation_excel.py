@@ -48,7 +48,6 @@ class OperationExcel:
             if case_id in col_data:
                 return num
             num = num +1
-            print(num)s
          
     #根据行号，找到该行内容
     def get_row_value(self,row):
