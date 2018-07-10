@@ -94,7 +94,7 @@ class GetData():
     def get_depend_field(self,row):
         col = int(data_config.get_filed_depend())
         data = self.opera_excel.get_cell_value(row,col)
-        if depend_case_id == '':
+        if data == '':
             return None
         else:
             return data

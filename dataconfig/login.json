@@ -1,6 +1,6 @@
 {"login_normal":{"fromSys":"scmpcapp","lang":"zh","nickname":"plat06","password":"123456"},
 "login_nonickname":{"fromSys":"scmpcapp","lang":"zh","nickname":"","password":"123456"},
-"login_nopassword":{"fromSys":"scmpcapp","lang":"zh","nickname":"plat06","password":""},
-"login_mismatch":{"fromSys":"scmpcapp","lang":"zh","nickname":"plat06","password":"1234567"},
-"get_brand01":{"fromSys":"scmpcapp","lang":"zh","wmsType":"all"}
+"login_nopassword":{"fromSys":"scmpcapp","lang":"zh","nickname":"plat07","password":""},
+"login_mismatch":{"fromSys":"scmpcapp","lang":"zh","nickname":"plat07","password":"1234567"},
+"get_brand01":{"fromSys":"scmpcapp","lang":"zh","token":"c7872368ea9bd1603e64da662b770e30"}
 }

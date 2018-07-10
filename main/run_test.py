@@ -14,6 +14,8 @@ class RunTest:
     #程序执行主入口
     def go_on_run(self):
         res = None
+        pass_count = []
+        fail_count = []
         rows_count = self.data.get_case_lines()
         for i in range(1,rows_count):
             is_run = self.data.get_is_run(i)
@@ -29,14 +31,18 @@ class RunTest:
                     #获取依赖的响应数据
                     depend_reponse_data = self.depend_data.get_data_for_key(i)
                     #获取依赖的key
-                    depent_key = self.data.get_depend_field(i)
+                    depend_key = self.data.get_depend_field(i)
                     request_data[depend_key] = depend_reponse_data
                 res = self.run_method.run_main(method,url,request_data,header) 
 
                 if self.com_util.is_contain(expect,res):
                     self.data.write_result(i,'pass')
+                    pass_count.append(i)
                 else:
-                    self.data.write_result(i,'fail')
+                    self.data.write_result(i,res)
+                    fail_count.append(i)
+        print(len(pass_count))
+        print(len(fail_count))
 
 if __name__ == '__main__':
     run = RunTest()
